@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("form").submit(function(event) {
+  $("#send-letter form").submit(function(event) {
     var nameInput = $("input#name").val();
 
     $(".name").text(nameInput);
@@ -8,4 +8,17 @@ $(document).ready(function() {
 
     event.preventDefault();
   });
+
+  $("#sentence-to-uppercase form").submit(function(event) {
+    var sentence = $("input#sentence").val();
+
+    var sentenceUppercase = sentence.toUpperCase();
+
+    $(".sentence-uppercase").text(sentenceUppercase);
+
+    $(".uppercase").show();
+
+    event.preventDefault();
+  });
+
 });
